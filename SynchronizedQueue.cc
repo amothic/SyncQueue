@@ -4,7 +4,7 @@ SynchronizedQueue::SynchronizedQueue(unsigned int _qsize) {
     qsize = _qsize;
 
     //queue内に入る残りの数
-    queue_remain  = new Sem(size-1);
+    queue_remain  = new Sem(qsize-1);
 
     //queue内に現在入っている数
     queue_count	= new Sem(0);
