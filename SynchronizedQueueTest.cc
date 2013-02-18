@@ -60,8 +60,15 @@ tester(SynchronizedQueue* q, int size) {
 
 static void
 test() {
-    SynchronizedQueue* q = new SynchronizedQueue(16);
-    tester(q, 16);
+    SynchronizedQueue* q1= new SynchronizedQueue(2);
+    tester(q1,16);
+    tester(q1,32);
+    SynchronizedQueue* q2 = new SynchronizedQueue(8);
+    tester(q2,16);
+    tester(q2,32);
+    SynchronizedQueue* q3 = new SynchronizedQueue(16);
+    tester(q3,16);
+    tester(q3,32);
 }
 
 int
