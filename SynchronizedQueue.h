@@ -14,7 +14,7 @@ class SynchronizedQueue {
         int  pop();
 
     private:
-        queue<int> q;
+        std::queue<int> q;
         unsigned int qsize;
         SemPtr queue_remain;
         SemPtr queue_count;
